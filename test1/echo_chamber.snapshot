@@ -1,0 +1,1389 @@
+{
+  "header" : {
+    "dataModelVersion" : "3"
+  },
+  "content" : {
+    "flowSnapshot" : {
+      "flowContents" : {
+        "comments" : "",
+        "componentType" : "PROCESS_GROUP",
+        "connections" : [ {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "59094af8-6bfd-3d44-8878-aaf7b0f018e2",
+            "id" : "28aebf16-a809-3772-b67d-4f471caa7500",
+            "name" : "PutSQL",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "59094af8-6bfd-3d44-8878-aaf7b0f018e2",
+          "identifier" : "c11d60bf-63c2-3e2c-80c8-e95e137ce336",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "59094af8-6bfd-3d44-8878-aaf7b0f018e2",
+            "id" : "2f401bf3-c4e8-3d2d-8e3a-5930251eb01d",
+            "name" : "GenerateFlowFile",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        } ],
+        "controllerServices" : [ ],
+        "funnels" : [ ],
+        "identifier" : "59094af8-6bfd-3d44-8878-aaf7b0f018e2",
+        "inputPorts" : [ ],
+        "labels" : [ ],
+        "name" : "airflow_dag",
+        "outputPorts" : [ ],
+        "position" : {
+          "x" : 542.7947832514293,
+          "y" : 499.1950256770358
+        },
+        "processGroups" : [ {
+          "comments" : "",
+          "componentType" : "PROCESS_GROUP",
+          "connections" : [ {
+            "backPressureDataSizeThreshold" : "1 GB",
+            "backPressureObjectThreshold" : 10000,
+            "bends" : [ ],
+            "componentType" : "CONNECTION",
+            "destination" : {
+              "comments" : "",
+              "groupId" : "bdcc3a10-f897-3a6b-ac48-fe59bfce1094",
+              "id" : "93033cfd-d398-364f-8267-41d24db2f218",
+              "name" : "PutSQL",
+              "type" : "PROCESSOR"
+            },
+            "flowFileExpiration" : "0 sec",
+            "groupIdentifier" : "bdcc3a10-f897-3a6b-ac48-fe59bfce1094",
+            "identifier" : "d908603d-5857-327f-9019-a7f0c3952656",
+            "labelIndex" : 1,
+            "loadBalanceCompression" : "DO_NOT_COMPRESS",
+            "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+            "name" : "",
+            "partitioningAttribute" : "",
+            "prioritizers" : [ ],
+            "selectedRelationships" : [ "success" ],
+            "source" : {
+              "comments" : "",
+              "groupId" : "bdcc3a10-f897-3a6b-ac48-fe59bfce1094",
+              "id" : "dee1e3ea-312c-3bf3-b47e-6af8ba22b883",
+              "name" : "GenerateFlowFile",
+              "type" : "PROCESSOR"
+            },
+            "zIndex" : 0
+          } ],
+          "controllerServices" : [ ],
+          "funnels" : [ {
+            "componentType" : "FUNNEL",
+            "groupIdentifier" : "bdcc3a10-f897-3a6b-ac48-fe59bfce1094",
+            "identifier" : "d562e0a1-b254-3d9e-a180-e742ddd93778",
+            "position" : {
+              "x" : 638.999998486648,
+              "y" : 193.99999357524587
+            }
+          } ],
+          "groupIdentifier" : "59094af8-6bfd-3d44-8878-aaf7b0f018e2",
+          "identifier" : "bdcc3a10-f897-3a6b-ac48-fe59bfce1094",
+          "inputPorts" : [ ],
+          "labels" : [ ],
+          "name" : "testing",
+          "outputPorts" : [ ],
+          "position" : {
+            "x" : 1012.3590538110861,
+            "y" : -11.64428283635931
+          },
+          "processGroups" : [ {
+            "comments" : "",
+            "componentType" : "PROCESS_GROUP",
+            "connections" : [ {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "95c3b48a-8e35-371b-9fab-53761ab97178",
+                "id" : "06edf5ff-6fd0-3450-8f90-960460510c1a",
+                "name" : "WriteDataToFileSystem",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "95c3b48a-8e35-371b-9fab-53761ab97178",
+              "identifier" : "06a93daf-b949-309a-8c99-c27ec28c9e6b",
+              "labelIndex" : 1,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "success" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "95c3b48a-8e35-371b-9fab-53761ab97178",
+                "id" : "c2c3c1d6-3c08-330b-9a84-6a74866932d8",
+                "name" : "PutWebSocket",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 0
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "95c3b48a-8e35-371b-9fab-53761ab97178",
+                "id" : "6ae2400e-a7b0-31d9-b1db-621a3d5efe5e",
+                "name" : "Discard Content",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "95c3b48a-8e35-371b-9fab-53761ab97178",
+              "identifier" : "77621fb3-afa7-3f02-a21a-e421e375f6e0",
+              "labelIndex" : 1,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "original" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "95c3b48a-8e35-371b-9fab-53761ab97178",
+                "id" : "e0cb3314-03a9-3461-bdf4-46192f6d4eea",
+                "name" : "Cat HTML file to run client page",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 0
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "95c3b48a-8e35-371b-9fab-53761ab97178",
+                "id" : "c2c3c1d6-3c08-330b-9a84-6a74866932d8",
+                "name" : "PutWebSocket",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "95c3b48a-8e35-371b-9fab-53761ab97178",
+              "identifier" : "21845329-0b6c-304b-8e0e-f8648b08a5b9",
+              "labelIndex" : 1,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "text message" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "95c3b48a-8e35-371b-9fab-53761ab97178",
+                "id" : "fa839d73-abbd-35c7-a40b-b0f7c101ec9b",
+                "name" : "JettyWebServer-ClientPostsToThisProcessor",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 0
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "95c3b48a-8e35-371b-9fab-53761ab97178",
+                "id" : "6ae2400e-a7b0-31d9-b1db-621a3d5efe5e",
+                "name" : "Discard Content",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "95c3b48a-8e35-371b-9fab-53761ab97178",
+              "identifier" : "e8483ca4-28d8-34a0-930d-d8bf7db5b845",
+              "labelIndex" : 1,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "connected", "binary message", "text message" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "95c3b48a-8e35-371b-9fab-53761ab97178",
+                "id" : "fa839d73-abbd-35c7-a40b-b0f7c101ec9b",
+                "name" : "JettyWebServer-ClientPostsToThisProcessor",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 0
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "95c3b48a-8e35-371b-9fab-53761ab97178",
+                "id" : "e0cb3314-03a9-3461-bdf4-46192f6d4eea",
+                "name" : "Cat HTML file to run client page",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "95c3b48a-8e35-371b-9fab-53761ab97178",
+              "identifier" : "9e186cb4-d3d3-336b-80ce-6e4775f4adc9",
+              "labelIndex" : 1,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "success" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "95c3b48a-8e35-371b-9fab-53761ab97178",
+                "id" : "1c720a01-e0f8-323f-84bf-7b7ffa224314",
+                "name" : "Nifi-WebServer-HandleHTTP",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 0
+            }, {
+              "backPressureDataSizeThreshold" : "1 GB",
+              "backPressureObjectThreshold" : 10000,
+              "bends" : [ ],
+              "componentType" : "CONNECTION",
+              "destination" : {
+                "comments" : "",
+                "groupId" : "95c3b48a-8e35-371b-9fab-53761ab97178",
+                "id" : "1634897c-2566-3b22-b227-1ab20328f63c",
+                "name" : "HandleHttpResponse",
+                "type" : "PROCESSOR"
+              },
+              "flowFileExpiration" : "0 sec",
+              "groupIdentifier" : "95c3b48a-8e35-371b-9fab-53761ab97178",
+              "identifier" : "cce3c972-1c87-3ed2-b39d-ac19e0a65eaa",
+              "labelIndex" : 1,
+              "loadBalanceCompression" : "DO_NOT_COMPRESS",
+              "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+              "name" : "",
+              "prioritizers" : [ ],
+              "selectedRelationships" : [ "output stream" ],
+              "source" : {
+                "comments" : "",
+                "groupId" : "95c3b48a-8e35-371b-9fab-53761ab97178",
+                "id" : "e0cb3314-03a9-3461-bdf4-46192f6d4eea",
+                "name" : "Cat HTML file to run client page",
+                "type" : "PROCESSOR"
+              },
+              "zIndex" : 0
+            } ],
+            "controllerServices" : [ {
+              "bundle" : {
+                "artifact" : "nifi-http-context-map-nar",
+                "group" : "org.apache.nifi",
+                "version" : "1.8.0"
+              },
+              "comments" : "",
+              "componentType" : "CONTROLLER_SERVICE",
+              "controllerServiceApis" : [ {
+                "bundle" : {
+                  "artifact" : "nifi-standard-services-api-nar",
+                  "group" : "org.apache.nifi",
+                  "version" : "1.8.0"
+                },
+                "type" : "org.apache.nifi.http.HttpContextMap"
+              } ],
+              "groupIdentifier" : "95c3b48a-8e35-371b-9fab-53761ab97178",
+              "identifier" : "03d58ce0-22f0-33c1-91de-465fa1b1a78e",
+              "name" : "StandardHttpContextMap",
+              "properties" : {
+                "Request Expiration" : "1 min",
+                "Maximum Outstanding Requests" : "5000"
+              },
+              "propertyDescriptors" : {
+                "Request Expiration" : {
+                  "displayName" : "Request Expiration",
+                  "identifiesControllerService" : false,
+                  "name" : "Request Expiration",
+                  "sensitive" : false
+                },
+                "Maximum Outstanding Requests" : {
+                  "displayName" : "Maximum Outstanding Requests",
+                  "identifiesControllerService" : false,
+                  "name" : "Maximum Outstanding Requests",
+                  "sensitive" : false
+                }
+              },
+              "type" : "org.apache.nifi.http.StandardHttpContextMap"
+            }, {
+              "bundle" : {
+                "artifact" : "nifi-websocket-services-jetty-nar",
+                "group" : "org.apache.nifi",
+                "version" : "1.8.0"
+              },
+              "comments" : "",
+              "componentType" : "CONTROLLER_SERVICE",
+              "controllerServiceApis" : [ {
+                "bundle" : {
+                  "artifact" : "nifi-websocket-services-api-nar",
+                  "group" : "org.apache.nifi",
+                  "version" : "1.8.0"
+                },
+                "type" : "org.apache.nifi.websocket.WebSocketService"
+              }, {
+                "bundle" : {
+                  "artifact" : "nifi-websocket-services-api-nar",
+                  "group" : "org.apache.nifi",
+                  "version" : "1.8.0"
+                },
+                "type" : "org.apache.nifi.websocket.WebSocketServerService"
+              } ],
+              "groupIdentifier" : "95c3b48a-8e35-371b-9fab-53761ab97178",
+              "identifier" : "487dc7a2-1286-3d54-8d9a-138b725bce39",
+              "name" : "JettyWebSocketServer",
+              "properties" : {
+                "max-binary-message-size" : "64 kb",
+                "login-service" : "hash",
+                "client-authentication" : "no",
+                "auth-path-spec" : "/*",
+                "auth-roles" : "**",
+                "max-text-message-size" : "64 kb",
+                "listen-port" : "9998",
+                "input-buffer-size" : "4 kb",
+                "basic-auth" : "false"
+              },
+              "propertyDescriptors" : {
+                "max-binary-message-size" : {
+                  "displayName" : "Max Binary Message Size",
+                  "identifiesControllerService" : false,
+                  "name" : "max-binary-message-size",
+                  "sensitive" : false
+                },
+                "login-service" : {
+                  "displayName" : "Login Service",
+                  "identifiesControllerService" : false,
+                  "name" : "login-service",
+                  "sensitive" : false
+                },
+                "users-properties-file" : {
+                  "displayName" : "Users Properties File",
+                  "identifiesControllerService" : false,
+                  "name" : "users-properties-file",
+                  "sensitive" : false
+                },
+                "ssl-context-service" : {
+                  "displayName" : "SSL Context Service",
+                  "identifiesControllerService" : true,
+                  "name" : "ssl-context-service",
+                  "sensitive" : false
+                },
+                "client-authentication" : {
+                  "displayName" : "SSL Client Authentication",
+                  "identifiesControllerService" : false,
+                  "name" : "client-authentication",
+                  "sensitive" : false
+                },
+                "auth-path-spec" : {
+                  "displayName" : "Basic Authentication Path Spec",
+                  "identifiesControllerService" : false,
+                  "name" : "auth-path-spec",
+                  "sensitive" : false
+                },
+                "auth-roles" : {
+                  "displayName" : "Basic Authentication Roles",
+                  "identifiesControllerService" : false,
+                  "name" : "auth-roles",
+                  "sensitive" : false
+                },
+                "max-text-message-size" : {
+                  "displayName" : "Max Text Message Size",
+                  "identifiesControllerService" : false,
+                  "name" : "max-text-message-size",
+                  "sensitive" : false
+                },
+                "listen-port" : {
+                  "displayName" : "Listen Port",
+                  "identifiesControllerService" : false,
+                  "name" : "listen-port",
+                  "sensitive" : false
+                },
+                "input-buffer-size" : {
+                  "displayName" : "Input Buffer Size",
+                  "identifiesControllerService" : false,
+                  "name" : "input-buffer-size",
+                  "sensitive" : false
+                },
+                "basic-auth" : {
+                  "displayName" : "Enable Basic Authentication",
+                  "identifiesControllerService" : false,
+                  "name" : "basic-auth",
+                  "sensitive" : false
+                }
+              },
+              "type" : "org.apache.nifi.websocket.jetty.JettyWebSocketServer"
+            } ],
+            "funnels" : [ ],
+            "groupIdentifier" : "bdcc3a10-f897-3a6b-ac48-fe59bfce1094",
+            "identifier" : "95c3b48a-8e35-371b-9fab-53761ab97178",
+            "inputPorts" : [ ],
+            "labels" : [ ],
+            "name" : "hello_world",
+            "outputPorts" : [ ],
+            "position" : {
+              "x" : 120.999998486648,
+              "y" : 611.9999935752459
+            },
+            "processGroups" : [ ],
+            "processors" : [ {
+              "autoTerminatedRelationships" : [ "nonzero status" ],
+              "bulletinLevel" : "WARN",
+              "bundle" : {
+                "artifact" : "nifi-standard-nar",
+                "group" : "org.apache.nifi",
+                "version" : "1.8.0"
+              },
+              "comments" : "",
+              "componentType" : "PROCESSOR",
+              "concurrentlySchedulableTaskCount" : 1,
+              "executionNode" : "ALL",
+              "groupIdentifier" : "95c3b48a-8e35-371b-9fab-53761ab97178",
+              "identifier" : "e0cb3314-03a9-3461-bdf4-46192f6d4eea",
+              "name" : "Cat HTML file to run client page",
+              "penaltyDuration" : "30 sec",
+              "position" : {
+                "x" : 755.4193710452417,
+                "y" : 480.0000317222185
+              },
+              "properties" : {
+                "Max Attribute Length" : "256",
+                "Command Path" : "/home/baga/nifi/hello_world/NifiHelloWorld/Archive/server.sh",
+                "Argument Delimiter" : ";",
+                "Ignore STDIN" : "false"
+              },
+              "propertyDescriptors" : {
+                "Max Attribute Length" : {
+                  "displayName" : "Max Attribute Length",
+                  "identifiesControllerService" : false,
+                  "name" : "Max Attribute Length",
+                  "sensitive" : false
+                },
+                "Command Path" : {
+                  "displayName" : "Command Path",
+                  "identifiesControllerService" : false,
+                  "name" : "Command Path",
+                  "sensitive" : false
+                },
+                "Working Directory" : {
+                  "displayName" : "Working Directory",
+                  "identifiesControllerService" : false,
+                  "name" : "Working Directory",
+                  "sensitive" : false
+                },
+                "Output Destination Attribute" : {
+                  "displayName" : "Output Destination Attribute",
+                  "identifiesControllerService" : false,
+                  "name" : "Output Destination Attribute",
+                  "sensitive" : false
+                },
+                "Argument Delimiter" : {
+                  "displayName" : "Argument Delimiter",
+                  "identifiesControllerService" : false,
+                  "name" : "Argument Delimiter",
+                  "sensitive" : false
+                },
+                "Ignore STDIN" : {
+                  "displayName" : "Ignore STDIN",
+                  "identifiesControllerService" : false,
+                  "name" : "Ignore STDIN",
+                  "sensitive" : false
+                },
+                "Command Arguments" : {
+                  "displayName" : "Command Arguments",
+                  "identifiesControllerService" : false,
+                  "name" : "Command Arguments",
+                  "sensitive" : false
+                }
+              },
+              "runDurationMillis" : 0,
+              "schedulingPeriod" : "0 sec",
+              "schedulingStrategy" : "TIMER_DRIVEN",
+              "style" : { },
+              "type" : "org.apache.nifi.processors.standard.ExecuteStreamCommand",
+              "yieldDuration" : "1 sec"
+            }, {
+              "autoTerminatedRelationships" : [ ],
+              "bulletinLevel" : "WARN",
+              "bundle" : {
+                "artifact" : "nifi-standard-nar",
+                "group" : "org.apache.nifi",
+                "version" : "1.8.0"
+              },
+              "comments" : "",
+              "componentType" : "PROCESSOR",
+              "concurrentlySchedulableTaskCount" : 1,
+              "executionNode" : "ALL",
+              "groupIdentifier" : "95c3b48a-8e35-371b-9fab-53761ab97178",
+              "identifier" : "1c720a01-e0f8-323f-84bf-7b7ffa224314",
+              "name" : "Nifi-WebServer-HandleHTTP",
+              "penaltyDuration" : "30 sec",
+              "position" : {
+                "x" : 813.798094189773,
+                "y" : 264.0000012046404
+              },
+              "properties" : {
+                "multipart-request-max-size" : "1 MB",
+                "Allow POST" : "true",
+                "Hostname" : "localhost",
+                "Default URL Character Set" : "UTF-8",
+                "Allow DELETE" : "true",
+                "container-queue-size" : "50",
+                "HTTP Context Map" : "03d58ce0-22f0-33c1-91de-465fa1b1a78e",
+                "multipart-read-buffer-size" : "512 KB",
+                "Allow OPTIONS" : "false",
+                "Allow GET" : "true",
+                "Allow HEAD" : "false",
+                "Listening Port" : "6688",
+                "Client Authentication" : "No Authentication",
+                "Allow PUT" : "true"
+              },
+              "propertyDescriptors" : {
+                "multipart-request-max-size" : {
+                  "displayName" : "Multipart Request Max Size",
+                  "identifiesControllerService" : false,
+                  "name" : "multipart-request-max-size",
+                  "sensitive" : false
+                },
+                "Allow POST" : {
+                  "displayName" : "Allow POST",
+                  "identifiesControllerService" : false,
+                  "name" : "Allow POST",
+                  "sensitive" : false
+                },
+                "Hostname" : {
+                  "displayName" : "Hostname",
+                  "identifiesControllerService" : false,
+                  "name" : "Hostname",
+                  "sensitive" : false
+                },
+                "Default URL Character Set" : {
+                  "displayName" : "Default URL Character Set",
+                  "identifiesControllerService" : false,
+                  "name" : "Default URL Character Set",
+                  "sensitive" : false
+                },
+                "Allow DELETE" : {
+                  "displayName" : "Allow DELETE",
+                  "identifiesControllerService" : false,
+                  "name" : "Allow DELETE",
+                  "sensitive" : false
+                },
+                "Additional HTTP Methods" : {
+                  "displayName" : "Additional HTTP Methods",
+                  "identifiesControllerService" : false,
+                  "name" : "Additional HTTP Methods",
+                  "sensitive" : false
+                },
+                "container-queue-size" : {
+                  "displayName" : "Container Queue Size",
+                  "identifiesControllerService" : false,
+                  "name" : "container-queue-size",
+                  "sensitive" : false
+                },
+                "HTTP Context Map" : {
+                  "displayName" : "HTTP Context Map",
+                  "identifiesControllerService" : true,
+                  "name" : "HTTP Context Map",
+                  "sensitive" : false
+                },
+                "multipart-read-buffer-size" : {
+                  "displayName" : "Multipart Read Buffer Size",
+                  "identifiesControllerService" : false,
+                  "name" : "multipart-read-buffer-size",
+                  "sensitive" : false
+                },
+                "SSL Context Service" : {
+                  "displayName" : "SSL Context Service",
+                  "identifiesControllerService" : true,
+                  "name" : "SSL Context Service",
+                  "sensitive" : false
+                },
+                "Allow OPTIONS" : {
+                  "displayName" : "Allow OPTIONS",
+                  "identifiesControllerService" : false,
+                  "name" : "Allow OPTIONS",
+                  "sensitive" : false
+                },
+                "Allowed Paths" : {
+                  "displayName" : "Allowed Paths",
+                  "identifiesControllerService" : false,
+                  "name" : "Allowed Paths",
+                  "sensitive" : false
+                },
+                "Allow GET" : {
+                  "displayName" : "Allow GET",
+                  "identifiesControllerService" : false,
+                  "name" : "Allow GET",
+                  "sensitive" : false
+                },
+                "Allow HEAD" : {
+                  "displayName" : "Allow HEAD",
+                  "identifiesControllerService" : false,
+                  "name" : "Allow HEAD",
+                  "sensitive" : false
+                },
+                "Listening Port" : {
+                  "displayName" : "Listening Port",
+                  "identifiesControllerService" : false,
+                  "name" : "Listening Port",
+                  "sensitive" : false
+                },
+                "Client Authentication" : {
+                  "displayName" : "Client Authentication",
+                  "identifiesControllerService" : false,
+                  "name" : "Client Authentication",
+                  "sensitive" : false
+                },
+                "Allow PUT" : {
+                  "displayName" : "Allow PUT",
+                  "identifiesControllerService" : false,
+                  "name" : "Allow PUT",
+                  "sensitive" : false
+                }
+              },
+              "runDurationMillis" : 0,
+              "schedulingPeriod" : "0 sec",
+              "schedulingStrategy" : "TIMER_DRIVEN",
+              "style" : { },
+              "type" : "org.apache.nifi.processors.standard.HandleHttpRequest",
+              "yieldDuration" : "1 sec"
+            }, {
+              "autoTerminatedRelationships" : [ ],
+              "bulletinLevel" : "WARN",
+              "bundle" : {
+                "artifact" : "nifi-websocket-processors-nar",
+                "group" : "org.apache.nifi",
+                "version" : "1.8.0"
+              },
+              "comments" : "",
+              "componentType" : "PROCESSOR",
+              "concurrentlySchedulableTaskCount" : 1,
+              "executionNode" : "ALL",
+              "groupIdentifier" : "95c3b48a-8e35-371b-9fab-53761ab97178",
+              "identifier" : "fa839d73-abbd-35c7-a40b-b0f7c101ec9b",
+              "name" : "JettyWebServer-ClientPostsToThisProcessor",
+              "penaltyDuration" : "30 sec",
+              "position" : {
+                "x" : 1277.798094189773,
+                "y" : 264.0000012046404
+              },
+              "properties" : {
+                "server-url-path" : "/echo",
+                "websocket-server-controller-service" : "487dc7a2-1286-3d54-8d9a-138b725bce39"
+              },
+              "propertyDescriptors" : {
+                "server-url-path" : {
+                  "displayName" : "Server URL Path",
+                  "identifiesControllerService" : false,
+                  "name" : "server-url-path",
+                  "sensitive" : false
+                },
+                "websocket-server-controller-service" : {
+                  "displayName" : "WebSocket Server ControllerService",
+                  "identifiesControllerService" : true,
+                  "name" : "websocket-server-controller-service",
+                  "sensitive" : false
+                }
+              },
+              "runDurationMillis" : 0,
+              "schedulingPeriod" : "0 sec",
+              "schedulingStrategy" : "TIMER_DRIVEN",
+              "style" : { },
+              "type" : "org.apache.nifi.processors.websocket.ListenWebSocket",
+              "yieldDuration" : "1 sec"
+            }, {
+              "autoTerminatedRelationships" : [ "success" ],
+              "bulletinLevel" : "WARN",
+              "bundle" : {
+                "artifact" : "nifi-standard-nar",
+                "group" : "org.apache.nifi",
+                "version" : "1.8.0"
+              },
+              "comments" : "",
+              "componentType" : "PROCESSOR",
+              "concurrentlySchedulableTaskCount" : 1,
+              "executionNode" : "ALL",
+              "groupIdentifier" : "95c3b48a-8e35-371b-9fab-53761ab97178",
+              "identifier" : "6ae2400e-a7b0-31d9-b1db-621a3d5efe5e",
+              "name" : "Discard Content",
+              "penaltyDuration" : "30 sec",
+              "position" : {
+                "x" : 1061.2282719081877,
+                "y" : 688.9278198647104
+              },
+              "properties" : {
+                "Start Offset" : "0 B",
+                "End Offset" : "0 B",
+                "Remove All Content" : "true"
+              },
+              "propertyDescriptors" : {
+                "Start Offset" : {
+                  "displayName" : "Start Offset",
+                  "identifiesControllerService" : false,
+                  "name" : "Start Offset",
+                  "sensitive" : false
+                },
+                "End Offset" : {
+                  "displayName" : "End Offset",
+                  "identifiesControllerService" : false,
+                  "name" : "End Offset",
+                  "sensitive" : false
+                },
+                "Remove All Content" : {
+                  "displayName" : "Remove All Content",
+                  "identifiesControllerService" : false,
+                  "name" : "Remove All Content",
+                  "sensitive" : false
+                }
+              },
+              "runDurationMillis" : 0,
+              "schedulingPeriod" : "0 sec",
+              "schedulingStrategy" : "TIMER_DRIVEN",
+              "style" : { },
+              "type" : "org.apache.nifi.processors.standard.ModifyBytes",
+              "yieldDuration" : "1 sec"
+            }, {
+              "autoTerminatedRelationships" : [ "success", "failure" ],
+              "bulletinLevel" : "WARN",
+              "bundle" : {
+                "artifact" : "nifi-standard-nar",
+                "group" : "org.apache.nifi",
+                "version" : "1.8.0"
+              },
+              "comments" : "",
+              "componentType" : "PROCESSOR",
+              "concurrentlySchedulableTaskCount" : 1,
+              "executionNode" : "ALL",
+              "groupIdentifier" : "95c3b48a-8e35-371b-9fab-53761ab97178",
+              "identifier" : "1634897c-2566-3b22-b227-1ab20328f63c",
+              "name" : "HandleHttpResponse",
+              "penaltyDuration" : "30 sec",
+              "position" : {
+                "x" : 619.999998486648,
+                "y" : 847.4281628257341
+              },
+              "properties" : {
+                "HTTP Context Map" : "03d58ce0-22f0-33c1-91de-465fa1b1a78e",
+                "HTTP Status Code" : "200"
+              },
+              "propertyDescriptors" : {
+                "HTTP Context Map" : {
+                  "displayName" : "HTTP Context Map",
+                  "identifiesControllerService" : true,
+                  "name" : "HTTP Context Map",
+                  "sensitive" : false
+                },
+                "HTTP Status Code" : {
+                  "displayName" : "HTTP Status Code",
+                  "identifiesControllerService" : false,
+                  "name" : "HTTP Status Code",
+                  "sensitive" : false
+                }
+              },
+              "runDurationMillis" : 0,
+              "schedulingPeriod" : "0 sec",
+              "schedulingStrategy" : "TIMER_DRIVEN",
+              "style" : { },
+              "type" : "org.apache.nifi.processors.standard.HandleHttpResponse",
+              "yieldDuration" : "1 sec"
+            }, {
+              "autoTerminatedRelationships" : [ "failure" ],
+              "bulletinLevel" : "WARN",
+              "bundle" : {
+                "artifact" : "nifi-websocket-processors-nar",
+                "group" : "org.apache.nifi",
+                "version" : "1.8.0"
+              },
+              "comments" : "",
+              "componentType" : "PROCESSOR",
+              "concurrentlySchedulableTaskCount" : 1,
+              "executionNode" : "ALL",
+              "groupIdentifier" : "95c3b48a-8e35-371b-9fab-53761ab97178",
+              "identifier" : "c2c3c1d6-3c08-330b-9a84-6a74866932d8",
+              "name" : "PutWebSocket",
+              "penaltyDuration" : "30 sec",
+              "position" : {
+                "x" : 1687.722654736648,
+                "y" : 486.0000012046404
+              },
+              "properties" : {
+                "websocket-session-id" : "${websocket.session.id}",
+                "websocket-controller-service-id" : "${websocket.controller.service.id}",
+                "websocket-message-type" : "TEXT",
+                "websocket-endpoint-id" : "${websocket.endpoint.id}"
+              },
+              "propertyDescriptors" : {
+                "websocket-session-id" : {
+                  "displayName" : "WebSocket Session Id",
+                  "identifiesControllerService" : false,
+                  "name" : "websocket-session-id",
+                  "sensitive" : false
+                },
+                "websocket-controller-service-id" : {
+                  "displayName" : "WebSocket ControllerService Id",
+                  "identifiesControllerService" : false,
+                  "name" : "websocket-controller-service-id",
+                  "sensitive" : false
+                },
+                "websocket-message-type" : {
+                  "displayName" : "WebSocket Message Type",
+                  "identifiesControllerService" : false,
+                  "name" : "websocket-message-type",
+                  "sensitive" : false
+                },
+                "websocket-endpoint-id" : {
+                  "displayName" : "WebSocket Endpoint Id",
+                  "identifiesControllerService" : false,
+                  "name" : "websocket-endpoint-id",
+                  "sensitive" : false
+                }
+              },
+              "runDurationMillis" : 0,
+              "schedulingPeriod" : "0 sec",
+              "schedulingStrategy" : "TIMER_DRIVEN",
+              "style" : { },
+              "type" : "org.apache.nifi.processors.websocket.PutWebSocket",
+              "yieldDuration" : "1 sec"
+            }, {
+              "autoTerminatedRelationships" : [ "success", "failure" ],
+              "bulletinLevel" : "WARN",
+              "bundle" : {
+                "artifact" : "nifi-standard-nar",
+                "group" : "org.apache.nifi",
+                "version" : "1.8.0"
+              },
+              "comments" : "",
+              "componentType" : "PROCESSOR",
+              "concurrentlySchedulableTaskCount" : 1,
+              "executionNode" : "ALL",
+              "groupIdentifier" : "95c3b48a-8e35-371b-9fab-53761ab97178",
+              "identifier" : "06edf5ff-6fd0-3450-8f90-960460510c1a",
+              "name" : "WriteDataToFileSystem",
+              "penaltyDuration" : "30 sec",
+              "position" : {
+                "x" : 1369.5687240725856,
+                "y" : 851.7258312827654
+              },
+              "properties" : {
+                "Create Missing Directories" : "true",
+                "Directory" : "/home/baga/nifi/hello_world/NifiHelloWorld/Archive/log",
+                "Conflict Resolution Strategy" : "replace"
+              },
+              "propertyDescriptors" : {
+                "Group" : {
+                  "displayName" : "Group",
+                  "identifiesControllerService" : false,
+                  "name" : "Group",
+                  "sensitive" : false
+                },
+                "Owner" : {
+                  "displayName" : "Owner",
+                  "identifiesControllerService" : false,
+                  "name" : "Owner",
+                  "sensitive" : false
+                },
+                "Create Missing Directories" : {
+                  "displayName" : "Create Missing Directories",
+                  "identifiesControllerService" : false,
+                  "name" : "Create Missing Directories",
+                  "sensitive" : false
+                },
+                "Permissions" : {
+                  "displayName" : "Permissions",
+                  "identifiesControllerService" : false,
+                  "name" : "Permissions",
+                  "sensitive" : false
+                },
+                "Maximum File Count" : {
+                  "displayName" : "Maximum File Count",
+                  "identifiesControllerService" : false,
+                  "name" : "Maximum File Count",
+                  "sensitive" : false
+                },
+                "Last Modified Time" : {
+                  "displayName" : "Last Modified Time",
+                  "identifiesControllerService" : false,
+                  "name" : "Last Modified Time",
+                  "sensitive" : false
+                },
+                "Directory" : {
+                  "displayName" : "Directory",
+                  "identifiesControllerService" : false,
+                  "name" : "Directory",
+                  "sensitive" : false
+                },
+                "Conflict Resolution Strategy" : {
+                  "displayName" : "Conflict Resolution Strategy",
+                  "identifiesControllerService" : false,
+                  "name" : "Conflict Resolution Strategy",
+                  "sensitive" : false
+                }
+              },
+              "runDurationMillis" : 0,
+              "schedulingPeriod" : "0 sec",
+              "schedulingStrategy" : "TIMER_DRIVEN",
+              "style" : { },
+              "type" : "org.apache.nifi.processors.standard.PutFile",
+              "yieldDuration" : "1 sec"
+            } ],
+            "remoteProcessGroups" : [ ],
+            "variables" : { }
+          }, {
+            "comments" : "",
+            "componentType" : "PROCESS_GROUP",
+            "connections" : [ ],
+            "controllerServices" : [ ],
+            "funnels" : [ {
+              "componentType" : "FUNNEL",
+              "groupIdentifier" : "4dd64919-94cd-32e0-a0dc-e5090716a491",
+              "identifier" : "871c8cae-24ef-394e-b22d-5317912a1b67",
+              "position" : {
+                "x" : 638.999998486648,
+                "y" : 193.99999357524587
+              }
+            } ],
+            "groupIdentifier" : "bdcc3a10-f897-3a6b-ac48-fe59bfce1094",
+            "identifier" : "4dd64919-94cd-32e0-a0dc-e5090716a491",
+            "inputPorts" : [ ],
+            "labels" : [ ],
+            "name" : "testing",
+            "outputPorts" : [ ],
+            "position" : {
+              "x" : 1157.2596882749895,
+              "y" : 271.1230421946032
+            },
+            "processGroups" : [ ],
+            "processors" : [ ],
+            "remoteProcessGroups" : [ ],
+            "variables" : { }
+          } ],
+          "processors" : [ {
+            "autoTerminatedRelationships" : [ ],
+            "bulletinLevel" : "WARN",
+            "bundle" : {
+              "artifact" : "nifi-standard-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.8.0"
+            },
+            "comments" : "",
+            "componentType" : "PROCESSOR",
+            "concurrentlySchedulableTaskCount" : 1,
+            "executionNode" : "ALL",
+            "groupIdentifier" : "bdcc3a10-f897-3a6b-ac48-fe59bfce1094",
+            "identifier" : "93033cfd-d398-364f-8267-41d24db2f218",
+            "name" : "PutSQL",
+            "penaltyDuration" : "30 sec",
+            "position" : {
+              "x" : 719.999998486648,
+              "y" : 529.4987137443132
+            },
+            "properties" : {
+              "Support Fragmented Transactions" : "true",
+              "Batch Size" : "100",
+              "Obtain Generated Keys" : "false",
+              "rollback-on-failure" : "false"
+            },
+            "propertyDescriptors" : {
+              "Support Fragmented Transactions" : {
+                "displayName" : "Support Fragmented Transactions",
+                "identifiesControllerService" : false,
+                "name" : "Support Fragmented Transactions",
+                "sensitive" : false
+              },
+              "putsql-sql-statement" : {
+                "displayName" : "SQL Statement",
+                "identifiesControllerService" : false,
+                "name" : "putsql-sql-statement",
+                "sensitive" : false
+              },
+              "Transaction Timeout" : {
+                "displayName" : "Transaction Timeout",
+                "identifiesControllerService" : false,
+                "name" : "Transaction Timeout",
+                "sensitive" : false
+              },
+              "Batch Size" : {
+                "displayName" : "Batch Size",
+                "identifiesControllerService" : false,
+                "name" : "Batch Size",
+                "sensitive" : false
+              },
+              "Obtain Generated Keys" : {
+                "displayName" : "Obtain Generated Keys",
+                "identifiesControllerService" : false,
+                "name" : "Obtain Generated Keys",
+                "sensitive" : false
+              },
+              "JDBC Connection Pool" : {
+                "displayName" : "JDBC Connection Pool",
+                "identifiesControllerService" : true,
+                "name" : "JDBC Connection Pool",
+                "sensitive" : false
+              },
+              "rollback-on-failure" : {
+                "displayName" : "Rollback On Failure",
+                "identifiesControllerService" : false,
+                "name" : "rollback-on-failure",
+                "sensitive" : false
+              }
+            },
+            "runDurationMillis" : 0,
+            "schedulingPeriod" : "0 sec",
+            "schedulingStrategy" : "TIMER_DRIVEN",
+            "style" : { },
+            "type" : "org.apache.nifi.processors.standard.PutSQL",
+            "yieldDuration" : "1 sec"
+          }, {
+            "autoTerminatedRelationships" : [ ],
+            "bulletinLevel" : "WARN",
+            "bundle" : {
+              "artifact" : "nifi-update-attribute-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.8.0"
+            },
+            "comments" : "",
+            "componentType" : "PROCESSOR",
+            "concurrentlySchedulableTaskCount" : 1,
+            "executionNode" : "ALL",
+            "groupIdentifier" : "bdcc3a10-f897-3a6b-ac48-fe59bfce1094",
+            "identifier" : "b090c135-dd76-3702-87ac-311ca4ba3b62",
+            "name" : "UpdateAttribute",
+            "penaltyDuration" : "30 sec",
+            "position" : {
+              "x" : 728.6807235843042,
+              "y" : 803.5377762443132
+            },
+            "properties" : {
+              "Store State" : "Store state locally",
+              "last_tms" : "$(now())"
+            },
+            "propertyDescriptors" : {
+              "Delete Attributes Expression" : {
+                "displayName" : "Delete Attributes Expression",
+                "identifiesControllerService" : false,
+                "name" : "Delete Attributes Expression",
+                "sensitive" : false
+              },
+              "Store State" : {
+                "displayName" : "Store State",
+                "identifiesControllerService" : false,
+                "name" : "Store State",
+                "sensitive" : false
+              },
+              "last_tms" : {
+                "displayName" : "last_tms",
+                "identifiesControllerService" : false,
+                "name" : "last_tms",
+                "sensitive" : false
+              },
+              "Stateful Variables Initial Value" : {
+                "displayName" : "Stateful Variables Initial Value",
+                "identifiesControllerService" : false,
+                "name" : "Stateful Variables Initial Value",
+                "sensitive" : false
+              }
+            },
+            "runDurationMillis" : 0,
+            "schedulingPeriod" : "0 sec",
+            "schedulingStrategy" : "TIMER_DRIVEN",
+            "style" : { },
+            "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+            "yieldDuration" : "1 sec"
+          }, {
+            "autoTerminatedRelationships" : [ ],
+            "bulletinLevel" : "WARN",
+            "bundle" : {
+              "artifact" : "nifi-standard-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.8.0"
+            },
+            "comments" : "",
+            "componentType" : "PROCESSOR",
+            "concurrentlySchedulableTaskCount" : 1,
+            "executionNode" : "PRIMARY",
+            "groupIdentifier" : "bdcc3a10-f897-3a6b-ac48-fe59bfce1094",
+            "identifier" : "dee1e3ea-312c-3bf3-b47e-6af8ba22b883",
+            "name" : "GenerateFlowFile",
+            "penaltyDuration" : "30 sec",
+            "position" : {
+              "x" : 720.29635468782,
+              "y" : 254.99999357524587
+            },
+            "properties" : {
+              "character-set" : "UTF-8",
+              "File Size" : "0B",
+              "Batch Size" : "1",
+              "Unique FlowFiles" : "false",
+              "Data Format" : "Text"
+            },
+            "propertyDescriptors" : {
+              "character-set" : {
+                "displayName" : "Character Set",
+                "identifiesControllerService" : false,
+                "name" : "character-set",
+                "sensitive" : false
+              },
+              "File Size" : {
+                "displayName" : "File Size",
+                "identifiesControllerService" : false,
+                "name" : "File Size",
+                "sensitive" : false
+              },
+              "generate-ff-custom-text" : {
+                "displayName" : "Custom Text",
+                "identifiesControllerService" : false,
+                "name" : "generate-ff-custom-text",
+                "sensitive" : false
+              },
+              "Batch Size" : {
+                "displayName" : "Batch Size",
+                "identifiesControllerService" : false,
+                "name" : "Batch Size",
+                "sensitive" : false
+              },
+              "Unique FlowFiles" : {
+                "displayName" : "Unique FlowFiles",
+                "identifiesControllerService" : false,
+                "name" : "Unique FlowFiles",
+                "sensitive" : false
+              },
+              "Data Format" : {
+                "displayName" : "Data Format",
+                "identifiesControllerService" : false,
+                "name" : "Data Format",
+                "sensitive" : false
+              }
+            },
+            "runDurationMillis" : 0,
+            "schedulingPeriod" : "0 sec",
+            "schedulingStrategy" : "TIMER_DRIVEN",
+            "style" : { },
+            "type" : "org.apache.nifi.processors.standard.GenerateFlowFile",
+            "yieldDuration" : "1 sec"
+          } ],
+          "remoteProcessGroups" : [ ],
+          "variables" : { }
+        } ],
+        "processors" : [ {
+          "autoTerminatedRelationships" : [ ],
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.8.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "PRIMARY",
+          "groupIdentifier" : "59094af8-6bfd-3d44-8878-aaf7b0f018e2",
+          "identifier" : "2f401bf3-c4e8-3d2d-8e3a-5930251eb01d",
+          "name" : "GenerateFlowFile",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 575.3957202239168,
+            "y" : -27.767331455716658
+          },
+          "properties" : {
+            "character-set" : "UTF-8",
+            "File Size" : "0B",
+            "Batch Size" : "1",
+            "Unique FlowFiles" : "false",
+            "Data Format" : "Text"
+          },
+          "propertyDescriptors" : {
+            "character-set" : {
+              "displayName" : "Character Set",
+              "identifiesControllerService" : false,
+              "name" : "character-set",
+              "sensitive" : false
+            },
+            "File Size" : {
+              "displayName" : "File Size",
+              "identifiesControllerService" : false,
+              "name" : "File Size",
+              "sensitive" : false
+            },
+            "generate-ff-custom-text" : {
+              "displayName" : "Custom Text",
+              "identifiesControllerService" : false,
+              "name" : "generate-ff-custom-text",
+              "sensitive" : false
+            },
+            "Batch Size" : {
+              "displayName" : "Batch Size",
+              "identifiesControllerService" : false,
+              "name" : "Batch Size",
+              "sensitive" : false
+            },
+            "Unique FlowFiles" : {
+              "displayName" : "Unique FlowFiles",
+              "identifiesControllerService" : false,
+              "name" : "Unique FlowFiles",
+              "sensitive" : false
+            },
+            "Data Format" : {
+              "displayName" : "Data Format",
+              "identifiesControllerService" : false,
+              "name" : "Data Format",
+              "sensitive" : false
+            }
+          },
+          "runDurationMillis" : 0,
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.GenerateFlowFile",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.8.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "59094af8-6bfd-3d44-8878-aaf7b0f018e2",
+          "identifier" : "28aebf16-a809-3772-b67d-4f471caa7500",
+          "name" : "PutSQL",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 575.0993640227448,
+            "y" : 246.73138871335073
+          },
+          "properties" : {
+            "Support Fragmented Transactions" : "true",
+            "Batch Size" : "100",
+            "Obtain Generated Keys" : "false",
+            "rollback-on-failure" : "false"
+          },
+          "propertyDescriptors" : {
+            "Support Fragmented Transactions" : {
+              "displayName" : "Support Fragmented Transactions",
+              "identifiesControllerService" : false,
+              "name" : "Support Fragmented Transactions",
+              "sensitive" : false
+            },
+            "putsql-sql-statement" : {
+              "displayName" : "SQL Statement",
+              "identifiesControllerService" : false,
+              "name" : "putsql-sql-statement",
+              "sensitive" : false
+            },
+            "Transaction Timeout" : {
+              "displayName" : "Transaction Timeout",
+              "identifiesControllerService" : false,
+              "name" : "Transaction Timeout",
+              "sensitive" : false
+            },
+            "Batch Size" : {
+              "displayName" : "Batch Size",
+              "identifiesControllerService" : false,
+              "name" : "Batch Size",
+              "sensitive" : false
+            },
+            "Obtain Generated Keys" : {
+              "displayName" : "Obtain Generated Keys",
+              "identifiesControllerService" : false,
+              "name" : "Obtain Generated Keys",
+              "sensitive" : false
+            },
+            "JDBC Connection Pool" : {
+              "displayName" : "JDBC Connection Pool",
+              "identifiesControllerService" : true,
+              "name" : "JDBC Connection Pool",
+              "sensitive" : false
+            },
+            "rollback-on-failure" : {
+              "displayName" : "Rollback On Failure",
+              "identifiesControllerService" : false,
+              "name" : "rollback-on-failure",
+              "sensitive" : false
+            }
+          },
+          "runDurationMillis" : 0,
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.PutSQL",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-update-attribute-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.8.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "59094af8-6bfd-3d44-8878-aaf7b0f018e2",
+          "identifier" : "3e0f6889-7ef9-317d-b2ab-7b0b81284209",
+          "name" : "UpdateAttribute",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 583.780089120401,
+            "y" : 520.7704512133507
+          },
+          "properties" : {
+            "Store State" : "Store state locally",
+            "last_tms" : "$(now())"
+          },
+          "propertyDescriptors" : {
+            "Delete Attributes Expression" : {
+              "displayName" : "Delete Attributes Expression",
+              "identifiesControllerService" : false,
+              "name" : "Delete Attributes Expression",
+              "sensitive" : false
+            },
+            "Store State" : {
+              "displayName" : "Store State",
+              "identifiesControllerService" : false,
+              "name" : "Store State",
+              "sensitive" : false
+            },
+            "last_tms" : {
+              "displayName" : "last_tms",
+              "identifiesControllerService" : false,
+              "name" : "last_tms",
+              "sensitive" : false
+            },
+            "Stateful Variables Initial Value" : {
+              "displayName" : "Stateful Variables Initial Value",
+              "identifiesControllerService" : false,
+              "name" : "Stateful Variables Initial Value",
+              "sensitive" : false
+            }
+          },
+          "runDurationMillis" : 0,
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "yieldDuration" : "1 sec"
+        } ],
+        "remoteProcessGroups" : [ ],
+        "variables" : { }
+      }
+    }
+  }
+}
